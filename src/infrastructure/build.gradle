@@ -1,0 +1,10 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.1'
+}
+
+dependencies {
+    implementation project(':src:application')
+    implementation project(':src:domain')
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

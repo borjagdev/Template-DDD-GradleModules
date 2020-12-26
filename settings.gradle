@@ -1,1 +1,4 @@
 rootProject.name = 'ddd-template'
+include 'src:application'
+include 'src:domain'
+include 'src:infrastructure'
