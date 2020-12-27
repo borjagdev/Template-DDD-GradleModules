@@ -6,5 +6,6 @@ dependencies {
     implementation project(':src:application')
     implementation project(':src:domain')
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
