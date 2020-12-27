@@ -1,5 +1,7 @@
 package dev.borjag.dddtemplate.ports.output.dtos;
 
+import dev.borjag.dddtemplate.objects.Resource;
+
 public class ResourceCreationInfo {
 
     private String id;
@@ -17,6 +19,14 @@ public class ResourceCreationInfo {
 
     public String getId() {
         return this.id;
+    }
+
+    public Resource toResource() {
+        return new Resource(
+          this.id,
+          this.name,
+          this.date
+        );
     }
 
 }

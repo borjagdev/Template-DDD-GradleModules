@@ -7,5 +7,13 @@ dependencies {
     implementation project(':src:domain')
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // testImplementation 'com.h2database:h2:1.4.200'
+    // Should use the above declaration, only for tests. This is just to being able to run the template application
+    implementation 'com.h2database:h2:1.4.200'
+}
+
+bootJar {
+    baseName('ddd-template')
 }
