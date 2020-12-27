@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,11 +27,11 @@ public class SomeController {
     }
 
     @PostMapping(
-            value = "/resource",
+            value = "/resources",
             produces = APPLICATION_JSON_VALUE
     )
     public ResponseEntity<Map<String, String>> createResource(
-            @RequestBody ResourceInfo info
+            @Valid @RequestBody ResourceInfo info
     ) {
         ResourceCreationInfo adaptedInfo = info.toResourceCreationInfo();
         resourceCreator.execute(adaptedInfo);

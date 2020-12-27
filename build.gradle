@@ -28,7 +28,7 @@ subprojects {
 		useJUnitPlatform()
 
 		include '**/*Should.class'
-		exclude '**/*IT.class'
+		include '**/*IT.class'
 	}
 
 

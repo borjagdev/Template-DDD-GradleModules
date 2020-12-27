@@ -13,7 +13,7 @@ public class JdbcResourceRepository implements ResourceRepository {
 
     @Override
     public void save(ResourcePersistenceInfo resourcePersistenceInfo) {
-        String insertQuery = "INSERT INTO resource_table (resource_id, resource_name, resource_date) " +
+        String insertQuery = "INSERT INTO resources_table (resource_id, resource_name, resource_date) " +
                              "VALUES (?,?,?)";
         jdbcTemplate.update(insertQuery,
                 resourcePersistenceInfo.getId(),
